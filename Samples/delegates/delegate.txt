@@ -1,0 +1,35 @@
+using System;
+
+function void MyDelegate(string a, float b);
+
+class A {
+public:		
+	shared void Main() {
+		A a = new A();
+		
+		MyDelegate f = new MyDelegate(a.Method);
+		
+		f.Invoke("Hello World", 3.141592);
+						
+		MyDelegate f2 = new MyDelegate(a.Method2) + new MyDelegate(A.Method3);
+		f2 += f;
+		
+		f2.Invoke("Hello World", 3.141592);
+	}
+	
+	void Method(string a, float b) {
+		Console.WriteLine("A::Method(string,float)");
+	}
+	
+	float Method(int z) {
+		Console.WriteLine("A::Method(int)");
+	}
+	
+	void Method2(string a, float b) {
+		Console.WriteLine("A::Method2(string,float)");
+	}
+	
+	shared void Method3(string a, float b) {
+		Console.WriteLine("A::Method3(string,float)");
+	}
+}

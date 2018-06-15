@@ -1,0 +1,26 @@
+using System;
+
+function void ClickHandler(object sender);
+
+class A {
+public:
+	signal ClickHandler OnClick;
+	
+	void MouseClicked() {
+		if(OnClick != null)
+			OnClick.Invoke(this);
+	}
+}
+
+class M {
+	shared void Main() {
+		A a = new A();
+		a.add_OnClick(new ClickHandler(MyClickHandler));
+		
+		a.MouseClicked();
+	}
+	
+	shared void MyClickHandler(object sender) {
+		Console.WriteLine("Sender object " + sender);
+	}
+}

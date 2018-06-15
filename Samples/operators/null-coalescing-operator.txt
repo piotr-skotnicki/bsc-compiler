@@ -1,0 +1,14 @@
+class A {
+	void Method() {
+		System.Console.WriteLine("A::Method");
+	}
+
+	shared void Main() {
+		A a = null;
+		A b = null;
+		A c = new A();
+		
+		A d = a ?? b ?? c;
+		d.Method();
+	}
+}

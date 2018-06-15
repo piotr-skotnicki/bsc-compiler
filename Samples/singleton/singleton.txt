@@ -1,0 +1,33 @@
+class Singleton {
+public:
+	shared Singleton GetInstance() {
+		if(instance == null)
+			instance = new Singleton();
+		return instance;
+	}
+	
+	int Value {
+		set { this.val = value; }
+		get { return this.val; }
+	}
+	
+private:
+	this() {
+	
+	}
+	
+	shared Singleton instance;
+	int val;
+}
+
+class A {
+	shared void Main() {
+		Singleton instance = Singleton.GetInstance();
+		instance.Value = 123;
+		
+		instance = null;
+		
+		instance = Singleton.GetInstance();
+		System.Console.WriteLine(instance.Value);
+	}
+}

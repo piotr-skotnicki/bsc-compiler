@@ -1,0 +1,22 @@
+class Parent {
+public:
+	class Nested {
+	public:
+		void Method() {
+			Parent p = new Parent();
+			p.private_field = 1;
+			System.Console.WriteLine(p.private_field);
+		}
+	}
+
+private:
+	int private_field;
+}
+
+class A {
+public:
+	shared void Main() {
+		Parent.Nested n = new Parent.Nested();
+		n.Method();
+	}
+}

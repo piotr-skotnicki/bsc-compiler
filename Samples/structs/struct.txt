@@ -1,0 +1,21 @@
+struct S {
+	this(int i) {
+		this.i = i;
+	}
+
+	void Test() {
+	
+	}
+	
+	int i;
+}
+
+class A {
+	shared void Main() {
+		int z = 1;
+		new S(z).Test();
+		
+		S s = new S(z);
+		s.i = 1;
+	}
+}

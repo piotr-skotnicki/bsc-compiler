@@ -1,0 +1,13 @@
+class Hanoi {	
+	void Solve(int n, char a, char b, char c) {
+		if(n > 0) {
+			Solve(n-1, a, c, b);
+			System.Console.WriteLine("{0} -> {1}", a.ToString(), c.ToString());
+			Solve(n-1, b, a, c);
+		}
+	}
+	
+	shared void Main() {
+		new Hanoi().Solve(3, 'A', 'B', 'C');
+	}
+}

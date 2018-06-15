@@ -1,0 +1,9 @@
+final class Sealed {
+
+}
+
+class A {
+	shared void Main() {
+	
+	}
+}

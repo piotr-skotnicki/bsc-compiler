@@ -1,0 +1,29 @@
+using System;
+
+interface IA {
+	void MethodA();
+}
+
+interface IB {
+	void MethodB();
+}
+
+class A : IA, IB {
+public:
+	virtual void MethodA() {
+		Console.WriteLine("A::MethodA");
+	}
+	
+	virtual void MethodB() {
+		Console.WriteLine("A::MethodB");
+	}
+	
+	shared void Main() {
+		A a = new A();
+		IA ia = a;
+		ia.MethodA();
+		
+		IB ib = a;
+		ib.MethodB();
+	}
+}

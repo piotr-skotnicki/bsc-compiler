@@ -1,0 +1,12 @@
+using System;
+
+class A {
+	shared void Main() {
+		string a = "Hello";		
+		Console.WriteLine(a + " World!");
+		
+		char c = 'c';
+		int i = 1;
+		Console.WriteLine("a" + "b" + c.ToString() + i.ToString());
+	}
+}

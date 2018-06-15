@@ -1,0 +1,33 @@
+using System;
+
+class Base {
+public:
+	this() {
+		Console.WriteLine("Base::this()");
+	}
+
+	this(float f) : this() {
+		Console.WriteLine("Base::this(float)");
+	}
+	
+	this(int i, float f) : this(f) {
+		Console.WriteLine("Base::this(int,float)");
+	}
+}
+
+class Derived(Base) {
+public:
+	this(char c) : this(3.14) {
+		Console.WriteLine("Derived::this(char)");
+	}
+	
+	this(float f) : base(10, f) {
+		Console.WriteLine("Derived::this(float)");
+	}
+}
+
+class A {
+	shared void Main() {
+		new Derived('a');
+	}
+}

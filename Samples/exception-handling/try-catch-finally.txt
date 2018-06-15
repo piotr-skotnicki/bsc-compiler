@@ -1,0 +1,30 @@
+using System;
+
+class MyException(ApplicationException) {
+public:
+	this(string msg) : base(msg) {}
+}
+
+class A {
+public:
+	shared void Main() {
+	
+		Console.WriteLine("Before try");
+	
+		try {
+			DangerousMethod();
+		} catch(MyException e) {
+			Console.Error.WriteLine("catch(MyException) " + e);
+		} catch(Exception e) {
+			Console.Error.WriteLine("catch(Exception) " + e);
+		} finally {
+			Console.WriteLine("finally");
+		}
+		
+		Console.WriteLine("After try");
+	}
+	
+	shared void DangerousMethod() {
+		raise new MyException("Error code: 123");
+	}
+}

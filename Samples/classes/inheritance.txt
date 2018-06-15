@@ -1,0 +1,16 @@
+class Base {
+public:
+	void Method() {
+		System.Console.WriteLine("Base::Method");
+	}
+}
+
+class Derived(Base) {
+
+}
+
+class A {
+	shared void Main() {
+		new Derived().Method();
+	}
+}

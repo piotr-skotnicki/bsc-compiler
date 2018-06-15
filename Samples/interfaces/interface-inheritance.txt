@@ -1,0 +1,36 @@
+using System;
+
+interface IBaseA {
+	void MethodA();
+}
+
+interface IBaseB {
+	void MethodB();
+}
+
+interface IDerived : IBaseA, IBaseB {
+	void MethodC();
+}
+
+class A : IDerived {
+public:
+	virtual void MethodA() {
+		Console.WriteLine("A::MethodA");
+	}
+	
+	virtual void MethodB() {
+		Console.WriteLine("A::MethodB");
+	}
+	
+	virtual void MethodC() {
+		Console.WriteLine("A::MethodC");
+	}
+	
+	shared void Main() {
+		A a = new A();
+		IDerived i = a;
+		i.MethodA();
+		i.MethodB();
+		i.MethodC();
+	}
+}

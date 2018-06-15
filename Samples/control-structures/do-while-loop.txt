@@ -1,0 +1,14 @@
+class A {
+	shared void Main() {
+		int i = 0;
+		
+		do {
+			++i;
+			System.Console.WriteLine("iteration " + i.ToString());
+		} while(i < 10);
+								
+		do
+			System.Console.WriteLine("Infinite loop");
+		while(true);
+	}
+}

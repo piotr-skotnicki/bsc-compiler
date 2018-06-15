@@ -1,0 +1,15 @@
+class ImplicitlyPublicClass {
+
+}
+
+public class ExplicitlyPublicClass {
+
+}
+
+internal class InternalClass {
+
+}
+
+class A {
+	shared void Main() {}
+}

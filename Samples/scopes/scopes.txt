@@ -1,0 +1,23 @@
+using System;
+
+class A {
+	void Test(int z) {
+		Console.WriteLine(z);
+		{
+			int z = 1;
+			Console.WriteLine(z);
+			{
+				int z = 2;
+				Console.WriteLine(z);
+			}
+			Console.WriteLine(z);
+			z = 5;
+			Console.WriteLine(z);
+		}
+		Console.WriteLine(z);
+	}
+	
+	shared void Main() {
+		new A().Test(123);
+	}
+}

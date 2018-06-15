@@ -1,0 +1,5 @@
+interface I {
+	void MethodA();
+	
+	int MethodB(int i, float f);	
+}

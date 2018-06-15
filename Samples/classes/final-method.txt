@@ -1,0 +1,12 @@
+class Base {
+public:
+	final void FinalMethod() {
+		
+	}
+}
+
+class A {
+	shared void Main() {
+		
+	}
+}

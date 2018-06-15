@@ -1,0 +1,17 @@
+using System;
+
+class A {
+	shared void Main() {
+		int a = (int)3.141592;
+		int b = (int)3.141592d;
+		char c = (char)2.7271;
+		char d = 'a';
+		double e = d;
+		
+		Console.WriteLine(a);
+		Console.WriteLine(b);
+		Console.WriteLine(c);
+		Console.WriteLine(d);
+		Console.WriteLine(e);
+	}
+}

@@ -1,0 +1,15 @@
+using System;
+
+class A {
+	shared void Main() {
+		int i = 5;
+		
+		if(i > 5) {
+			Console.WriteLine("i is greater than 5");
+		} else if(i == 5) {
+			Console.WriteLine("i is equal to 5");
+		} else {
+			Console.WriteLine("i is less than 5");
+		}
+	}
+}

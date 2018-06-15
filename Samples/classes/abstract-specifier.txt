@@ -1,0 +1,18 @@
+abstract class Base {
+public:
+	abstract void AbstractMethod();
+}
+
+class Derived(Base) {
+public:
+	virtual void AbstractMethod() {
+		System.Console.WriteLine("Derived::AbstractMethod");
+	}
+}
+
+class A {
+	shared void Main() {
+		Base b = new Derived();
+		b.AbstractMethod();
+	}
+}

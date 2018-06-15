@@ -1,0 +1,43 @@
+namespace A {	
+	namespace B {
+		using System;
+		
+		class Class {
+		public:
+			this() {
+				Console.WriteLine("A::B::Class");
+			}
+		}
+	}
+}
+
+namespace B {
+	using System;
+	typedef C = System.Console;
+	
+	namespace A {
+		class Class {
+		public:
+			this() {
+				C.WriteLine("B::A::Class");
+			}
+		}	
+	}
+	
+	namespace X {
+		class Class {
+		public:
+			this() {
+				C.WriteLine("B::X::Class");
+			}
+		}
+	}
+}
+
+class Program {
+	shared void Main() {
+		new A.B.Class();
+		new B.A.Class();
+		new B.X.Class();
+	}
+}

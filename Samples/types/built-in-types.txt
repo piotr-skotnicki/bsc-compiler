@@ -1,0 +1,18 @@
+class A {
+	shared void Main() {
+		object o = null;
+		bool b = true;
+		char c = 'a';
+		sbyte sb = -20;
+		byte bt = 230u;
+		short s = -30000;
+		ushort us = 60000u;
+		int i = -2000000000;
+		uint ui = 4000000000u;
+		long l = -9000000000000000000l;
+		ulong ul = 18000000000000000000ul;
+		float f = 3.4e38;
+		double d = 1.7e308d;
+		string str = "Hello World!";
+	}
+}

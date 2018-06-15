@@ -1,0 +1,21 @@
+using System;
+
+typedef C = Console;
+typedef ShortName = Ns.ThisIsAVeryLongNameOfSomeClass;
+
+namespace Ns {
+	class ThisIsAVeryLongNameOfSomeClass {
+	public:
+		void Method() {
+			C.WriteLine("ThisIsAVeryLongNameOfSomeClass::Method");
+		}
+	}
+}
+
+class A {
+	shared void Main() {
+		C.WriteLine("a");
+		
+		new ShortName().Method();
+	}
+}

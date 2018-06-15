@@ -1,0 +1,21 @@
+class AccessScopes {
+public:
+	this() {}
+	void PublicMethod() {}	
+	int public_field; 
+
+family:
+	void ProtectedMethod() {}
+	
+private:
+	int private_field;
+	
+public:	
+	int public_field_2;		
+}
+
+class A {
+	shared void Main() {
+		new A();
+	}
+}

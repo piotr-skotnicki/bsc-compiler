@@ -1,0 +1,23 @@
+class A {
+public:
+	int Length {
+		get { return _len; }
+		set { _len = value; }
+	}
+	
+	this() {
+		_len = 10;
+	}
+	
+	shared void Main() {
+		A a = new A();
+		
+		a.Length = 123;
+		int i = a.Length;
+		
+		System.Console.WriteLine(i);
+	}
+	
+private:
+	int _len;
+}

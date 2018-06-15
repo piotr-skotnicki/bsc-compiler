@@ -1,0 +1,17 @@
+using System;
+
+class A {
+	shared void Main() {
+		A a = new A();		
+		Console.WriteLine(a is A);
+
+		Type type = typeof(A);		
+		Console.WriteLine(type.ToString());
+		
+		object o = a;
+		Console.WriteLine(o is A);
+		
+		A b = o as A;		
+		Console.WriteLine(b);
+	}
+}

@@ -1,0 +1,34 @@
+using System;
+using System.Windows.Forms;
+
+class MainWindow(Form) {
+public:	
+	this() {
+		this.Width = 500;
+		this.Height = 400;
+		this.Text = "My first window";
+						
+		this.button = new Button();
+		this.button.Text = "Click Me";
+		
+		this.button.add_Click(new EventHandler(OnClick));
+				
+		this.Controls.Add(label);
+		this.Controls.Add(button);
+	}
+
+family:
+	void OnClick(object sender, EventArgs e) {
+		MessageBox.Show("Clicked!");
+	}
+	
+private:
+	Label label;
+	Button button;
+}
+
+class A {		
+	shared void Main() {
+		Application.Run(new MainWindow());
+	}
+}

@@ -1,0 +1,6 @@
+class A {
+	shared void Main() {
+		A a = null;
+		System.Console.WriteLine(a == null);
+	}
+}

@@ -1,0 +1,25 @@
+using System;
+
+interface I {
+	void MethodA();
+	
+	int MethodB(int i, float f);	
+}
+
+class A : I {
+public:
+	virtual void MethodA() {
+		Console.WriteLine("A::MethodA");
+	}
+	
+	virtual int MethodB(int i, float f) {
+		Console.WriteLine("A::MethodB");
+		return 1;
+	}
+	
+	shared void Main() {
+		I i = new A();
+		i.MethodA();
+		i.MethodB(5, 3.141592);
+	}
+}

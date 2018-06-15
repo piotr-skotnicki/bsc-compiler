@@ -1,0 +1,30 @@
+using System;
+
+class GuessTheNumber {
+	void Play() {
+		int guess = -1, answer = new Random((int)DateTime.Now.Ticks).Next()%10+1, lives = 3;
+		Console.Write("Guess the number (1-10): ");
+		while(lives > 0 && guess != answer) {
+			guess = Convert.ToInt32(Console.ReadLine());
+			if(guess == answer) {
+				Console.WriteLine("Correct! ");
+			} else {
+				if(guess < answer) {
+					Console.Write("{0} is too small. ", guess.ToString());
+				} else {
+					Console.Write("{0} is too big. ", guess.ToString());
+				}
+				--lives;
+				if(lives == 0) {
+					Console.WriteLine("You lose");
+				} else {
+					Console.Write("Try again: ");
+				}
+			}
+		}
+	}
+	
+	shared void Main() {
+		new GuessTheNumber().Play();
+	}
+}

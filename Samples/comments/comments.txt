@@ -1,0 +1,10 @@
+class A {
+	shared void Main() {
+		// single-line comment
+		
+		/* multi-line
+		comment */
+		
+		System.Console.WriteLine(/* inline comment */"Hello World!");
+	}
+}

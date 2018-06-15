@@ -1,0 +1,13 @@
+class Fibonacci {
+	int F(int n) {
+		if(n == 0)
+			return 0;
+		if(n <= 2)
+			return 1;
+		return F(n-1) + F(n-2);
+	}
+	
+	shared void Main() {
+		System.Console.WriteLine(new Fibonacci().F(15));
+	}
+}

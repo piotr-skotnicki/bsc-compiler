@@ -1,0 +1,7 @@
+class $void {}
+
+class $class($void) {	
+	shared void Main() {	
+		int $int = 1;
+	}
+}

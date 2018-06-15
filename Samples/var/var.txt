@@ -1,0 +1,22 @@
+using System;
+
+class A {
+public:
+	shared void Main() {
+		var i = 2000000000;
+		var s = "Hello world!";
+		var a = new A();
+		var f = 3.141592;
+		var t = new int[10];
+		
+		Console.WriteLine(i);
+		Console.WriteLine(s);
+		Console.WriteLine(a);
+		Console.WriteLine(f);
+		Console.WriteLine(t[0]);
+	}
+	
+	virtual string ToString() {
+		return "A class object";
+	}
+}

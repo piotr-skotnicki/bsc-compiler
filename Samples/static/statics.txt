@@ -1,0 +1,24 @@
+using System;
+
+class A {
+	shared this() {
+		Console.WriteLine("Static constructor");
+	}
+	
+	shared int i;
+	
+	shared int Property {
+		get { return i; }
+		set { i = value; }
+	}
+	
+	shared void StaticMethod() {
+		Console.WriteLine("A::StaticMethod");
+	}
+	
+	shared void Main() {
+		A.Property = 1;
+		A.i = 123;
+		A.StaticMethod();
+	}
+}
